@@ -19,8 +19,8 @@ module.exports = merge(common, {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.js$/, // Apply this rule to .js files
-        exclude: /node_modules/, // Exclude node_modules directory
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
