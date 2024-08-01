@@ -1,6 +1,6 @@
+import eslintConfigPrettier from 'eslint-config-prettier';
 import globals from 'globals';
 import pluginJs from '@eslint/js';
-import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default [
   eslintConfigPrettier,
@@ -14,7 +14,11 @@ export default [
       'no-duplicate-imports': 'error',
       'no-use-before-define': 'error',
       'no-useless-assignment': 'error',
-      'arrow-body-style': ['error', 'as-needed', { 'requireReturnForObjectLiteral': true}],
+      'arrow-body-style': [
+        'error',
+        'as-needed',
+        { requireReturnForObjectLiteral: true },
+      ],
       'block-scoped-var': 'error',
       'default-case': 'error',
       'default-case-last': 'error',
@@ -22,7 +26,7 @@ export default [
       'eqeqeq': 'error',
       'no-alert': 'error',
       'no-array-constructor': 'error',
-      'no-console': ['error', { allow: ['warn', 'error'] }],
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-continue': 'error',
       'no-else-return': 'error',
       'no-empty-function': 'error',
@@ -30,14 +34,13 @@ export default [
       'no-extend-native': 'error',
       'no-extra-bind': 'error',
       'no-implicit-coercion': 'error',
-      'no-inline-comments': 'errors',
+      'no-inline-comments': 'error',
       'no-invalid-this': 'error',
       'no-iterator': 'error',
-      'no-labels': ['error', { 'allowLoop': true}],
+      'no-labels': ['error', { allowLoop: true }],
       'no-lone-blocks': 'error',
       'no-lonely-if': 'error',
       'no-loop-func': 'error',
-      'no-magic-numbers': 'error',
       'no-multi-assign': 'error',
       'no-multi-str': 'error',
       'no-nested-ternary': 'error',
@@ -46,11 +49,11 @@ export default [
       'no-new-wrappers': 'error',
       'no-object-constructor': 'error',
       'no-octal-escape': 'error',
-      'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
+      'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
       'no-proto': 'error',
       'no-return-assign': 'error',
       'no-script-url': 'error',
-      'no-sequences': ['error', { 'allowInParentheses': false }],
+      'no-sequences': ['error', { allowInParentheses: false }],
       'no-throw-literal': 'error',
       'no-undef-init': 'error',
       'no-underscore-dangle': 'error',
@@ -64,7 +67,7 @@ export default [
       'no-var': 'error',
       'no-void': 'error',
       'object-shorthand': 'error',
-      'one-var': ['error', 'always'],
+      'one-var': ['error', 'never'],
       'operator-assignment': ['error', 'always'],
       'prefer-exponentiation-operator': 'error',
       'prefer-numeric-literals': 'error',
@@ -75,7 +78,7 @@ export default [
       'prefer-template': 'error',
       'radix': 'error',
       'sort-imports': 'error',
-      'yoda': ['error', 'never', { 'exceptRange': true }],
+      'yoda': ['error', 'never', { exceptRange: true }],
     },
   },
   {
