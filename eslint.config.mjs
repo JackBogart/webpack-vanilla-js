@@ -87,6 +87,15 @@ export default [
       'webpack.dev.js',
       'webpack.prod.js',
       'dist/',
+      'babel.config.js',
     ],
+  },
+  {
+    files: ['**/*.test.js'],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
+    },
   },
 ];
