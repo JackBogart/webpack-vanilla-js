@@ -11,7 +11,6 @@ export default [
     },
     rules: {
       'no-constructor-return': 'error',
-      'no-duplicate-imports': 'error',
       'no-use-before-define': ["error", { functions: false,}],
       'no-useless-assignment': 'error',
       'arrow-body-style': [
