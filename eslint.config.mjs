@@ -76,7 +76,7 @@ export default [
       'prefer-rest-params': 'error',
       'prefer-template': 'error',
       'radix': 'error',
-      'sort-imports': ['error', {ignoreCase: true}],
+      'sort-imports': ['error'],
       'yoda': ['error', 'never', { exceptRange: true }],
       'curly': 'error',
     },
