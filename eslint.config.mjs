@@ -13,12 +13,9 @@ export default [
     },
     rules: {
       'no-constructor-return': 'error',
-      'no-use-before-define': ["error", { functions: false,}],
+      'no-use-before-define': ['error', { functions: false }],
       'no-useless-assignment': 'error',
-      'arrow-body-style': [
-        'error',
-        'as-needed',
-      ],
+      'arrow-body-style': ['error', 'as-needed'],
       'block-scoped-var': 'error',
       'default-case': 'error',
       'default-case-last': 'error',
@@ -67,7 +64,7 @@ export default [
       'no-var': 'error',
       'no-void': 'error',
       'object-shorthand': 'error',
-      'one-var': ['error', { initialized: "never", uninitialized: "always" }],
+      'one-var': ['error', { initialized: 'never', uninitialized: 'always' }],
       'operator-assignment': ['error', 'always'],
       'prefer-exponentiation-operator': 'error',
       'prefer-numeric-literals': 'error',
@@ -79,22 +76,29 @@ export default [
       'radix': 'error',
       'yoda': ['error', 'never', { exceptRange: true }],
       'curly': 'error',
-      "import/order": [
-      "error",
-      {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          ["parent", "sibling", "index"]
-        ],
-        "newlines-between": "always",
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": false,
-        }
-      }
-    ],
+      'import/order': [
+        'error',
+        {
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            ['parent', 'sibling', 'index'],
+          ],
+          'newlines-between': 'always',
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: false,
+          },
+        },
+      ],
+      'sort-imports': [
+        'error',
+        {
+          ignoreDeclarationSort: true,
+          ignoreMemberSort: false,
+        },
+      ],
     },
   },
   {
