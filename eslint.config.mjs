@@ -1,10 +1,12 @@
-import eslintConfigPrettier from 'eslint-config-prettier';
-import globals from 'globals';
 import pluginJs from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import importPlugin from 'eslint-plugin-import';
+import globals from 'globals';
 
 export default [
   eslintConfigPrettier,
   pluginJs.configs.recommended,
+  importPlugin.flatConfigs.recommended,
   {
     languageOptions: {
       globals: globals.browser,
@@ -16,7 +18,6 @@ export default [
       'arrow-body-style': [
         'error',
         'as-needed',
-        { requireReturnForObjectLiteral: true },
       ],
       'block-scoped-var': 'error',
       'default-case': 'error',
@@ -76,9 +77,25 @@ export default [
       'prefer-rest-params': 'error',
       'prefer-template': 'error',
       'radix': 'error',
-      'sort-imports': ['error'],
       'yoda': ['error', 'never', { exceptRange: true }],
       'curly': 'error',
+      "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling", "index"]
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true,
+          "no-duplicates": false,
+        }
+      }
+    ],
     },
   },
   {
