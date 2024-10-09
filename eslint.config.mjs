@@ -91,8 +91,7 @@ export default [
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",
-          "caseInsensitive": true,
-          "no-duplicates": false,
+          "caseInsensitive": false,
         }
       }
     ],
