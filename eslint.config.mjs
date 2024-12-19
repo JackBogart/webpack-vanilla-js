@@ -4,9 +4,12 @@ import importPlugin from 'eslint-plugin-import';
 import globals from 'globals';
 
 export default [
+  // Disables linting rules that conflict with prettier
   eslintConfigPrettier,
   pluginJs.configs.recommended,
+  // Import sort plugin
   importPlugin.flatConfigs.recommended,
+  // Adds browser globals to avoid linting errors
   {
     languageOptions: {
       globals: globals.browser,
@@ -110,6 +113,7 @@ export default [
       'babel.config.js',
     ],
   },
+  // Adds jest globals for testing files to avoid linting errors
   {
     files: ['**/*.test.js'],
     languageOptions: {

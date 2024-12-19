@@ -6,6 +6,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 module.exports = merge(common, {
   mode: 'production',
   devtool: 'source-map',
+  // Extracts the CSS from a JS file into it's own CSS file
   plugins: [new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' })],
   module: {
     rules: [
@@ -13,6 +14,7 @@ module.exports = merge(common, {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
+      // Loader for babel transpiling
       {
         test: /\.(?:js|mjs|cjs)$/,
         exclude: /node_modules/,
@@ -22,6 +24,7 @@ module.exports = merge(common, {
       },
     ],
   },
+  // Minifies CSS for faster load time
   optimization: {
     minimizer: ['...', new CssMinimizerPlugin()],
   },
